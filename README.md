@@ -14,9 +14,10 @@ Understanding the relationship between algorithms and problem domains is essenti
 ### Supervised Learning
 Supervised learning algorithms learn patterns from labeled data to identify patterns and map inputs to specific desired outputs
 Key Functions and Types:
-    Classification: Categorizes data into distinct groups, such as detecting spam emails, identifying objects in images, or medical diagnosis.
-    Regression: Predicts continuous, numerical values, such as forecasting house prices based on features like size and location.
-    Pattern Recognition: Identifies underlying relationships between input features and target labels, allowing the model to make, accurate, data-driven decisions
+    
+- Classification: Categorizes data into distinct groups, such as detecting spam emails, identifying objects in images, or medical diagnosis.
+- Regression: Predicts continuous, numerical values, such as forecasting house prices based on features like size and location.
+- Pattern Recognition: Identifies underlying relationships between input features and target labels, allowing the model to make, accurate, data-driven decisions
 
 Examples:
 - Decision Trees
