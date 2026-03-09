@@ -13,6 +13,7 @@ Understanding the relationship between algorithms and problem domains is essenti
 
 ### Supervised Learning
 Supervised learning algorithms learn patterns from labeled data to identify patterns and map inputs to specific desired outputs
+
 Key Functions and Types:
     
 - Classification: Categorizes data into distinct groups, such as detecting spam emails, identifying objects in images, or medical diagnosis.
