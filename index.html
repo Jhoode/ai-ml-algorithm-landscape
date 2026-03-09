@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jude Omo-Ojugo | AI Portfolio</title>
-  <meta name="description" content="AI portfolio for Jude Omo-Ojugo featuring machine learning, deployment engineering, generative AI, and systems design projects." />
+  <meta name="description" content="AI portfolio for Jude Omo-Ojugo featuring a machine learning algorithm landscape project." />
   <style>
     :root {
       --bg: #0b1020;
@@ -97,7 +97,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.9fr;
+      grid-template-columns: 1.15fr 0.95fr;
       gap: 28px;
       align-items: stretch;
     }
@@ -105,8 +105,6 @@
     .hero-copy,
     .hero-panel,
     .section-card,
-    .project-card,
-    .timeline,
     .footer-card {
       background: var(--card);
       border: 1px solid var(--line);
@@ -234,18 +232,46 @@
 
     .section-head p { color: var(--muted); margin: 8px 0 0; max-width: 60ch; }
 
-    .grid-3 {
+    .section-card {
+      padding: 28px;
+      margin-bottom: 18px;
+    }
+
+    .section-card p { color: var(--muted); }
+
+    .content-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 18px;
     }
 
-    .section-card {
-      padding: 24px;
+    .subcard {
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      height: 100%;
     }
 
-    .section-card h3 { font-size: 1.12rem; margin-bottom: 10px; }
-    .section-card p { color: var(--muted); margin: 0; }
+    .subcard h3 {
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .subcard h4 {
+      margin-top: 16px;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      color: #dbeafe;
+    }
+
+    ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+      color: var(--muted);
+    }
+
+    li { margin-bottom: 6px; }
 
     .skills {
       display: flex;
@@ -263,64 +289,9 @@
       font-size: 0.92rem;
     }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .project-card {
-      padding: 24px;
-      display: grid;
-      gap: 14px;
-    }
-
-    .project-card.featured {
-      grid-column: span 2;
-      grid-template-columns: 1.05fr 1fr;
-      align-items: center;
-    }
-
-    .project-card p { color: var(--muted); margin: 0; }
-
-    .project-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .project-shot {
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.03);
-    }
-
-    .timeline {
-      padding: 24px;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 18px;
-      padding: 18px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .timeline-item:last-child { border-bottom: 0; }
-    .timeline-item .date { color: var(--accent); font-weight: 700; }
-    .timeline-item p { color: var(--muted); margin: 6px 0 0; }
-
-    .reflection {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 18px;
-    }
-
     .quote {
-      font-size: 1.2rem;
-      line-height: 1.5;
+      font-size: 1.14rem;
+      line-height: 1.6;
       color: #eef4ff;
     }
 
@@ -341,21 +312,16 @@
 
     @media (max-width: 980px) {
       .hero-grid,
-      .project-card.featured,
-      .reflection,
-      .grid-3,
-      .projects {
+      .content-grid {
         grid-template-columns: 1fr;
       }
 
-      .project-card.featured { grid-column: span 1; }
       .hero-stats { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 720px) {
       .nav-links { display: none; }
-      .hero-copy, .hero-panel, .section-card, .project-card, .timeline, .footer-card { padding: 20px; }
-      .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+      .hero-copy, .hero-panel, .section-card, .footer-card { padding: 20px; }
       .hero { padding-top: 56px; }
     }
   </style>
@@ -366,9 +332,8 @@
       <div class="brand">Jude<span>/AI</span></div>
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#journey">Journey</a>
+        <a href="#project">Project</a>
+        <a href="#categories">Categories</a>
         <a href="#reflection">Reflection</a>
       </div>
       <a class="btn btn-secondary" href="https://github.com/jhoode/ai-ml-algorithm-landscape" target="_blank" rel="noreferrer">GitHub</a>
@@ -378,27 +343,30 @@
   <header class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow">AI Portfolio • Deployment + Systems + ML</div>
-        <h1>Building practical AI that’s clear, usable, and production-minded.</h1>
+        <div class="eyebrow">AI Portfolio • Featured Project</div>
+        <h1>AI &amp; Machine Learning Algorithm Landscape</h1>
         <p>
-          I’m Jude Omo-Ojugo, a deployment engineer with a background in cybersecurity and graduate study in artificial intelligence. This portfolio highlights how I think across machine learning, architecture, AI deployment, and real-world solution design.
+          This portfolio highlights a single featured artifact that presents a visual framework of major machine learning algorithm categories and their primary application domains.
+        </p>
+        <p>
+          The project is designed to show how different machine learning models align with specific data types and real-world AI problems, while also demonstrating clear technical communication and portfolio-quality presentation.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-primary" href="#project">Explore Project</a>
           <a class="btn btn-secondary" href="#reflection">Read Reflection</a>
         </div>
         <div class="hero-stats">
           <div class="stat">
-            <strong>AI + ML</strong>
-            <span>Model categories, domains, and use-case thinking</span>
+            <strong>4</strong>
+            <span>Major algorithm categories</span>
           </div>
           <div class="stat">
-            <strong>Systems Design</strong>
-            <span>Architecture-minded approach to solving problems</span>
+            <strong>4</strong>
+            <span>Primary AI application areas</span>
           </div>
           <div class="stat">
-            <strong>Deployment Focus</strong>
-            <span>Bridging concepts with implementation and operations</span>
+            <strong>1</strong>
+            <span>Focused portfolio-ready artifact</span>
           </div>
         </div>
       </div>
@@ -412,7 +380,7 @@
           <img src="ai_algorithm_landscape.png" alt="AI and Machine Learning Algorithm Landscape diagram" />
         </div>
         <div class="panel-links">
-          <a class="mini-link" href="#projects"><strong>Main project:</strong> AI &amp; Machine Learning Algorithm Landscape</a>
+          <a class="mini-link" href="#project"><strong>Project focus:</strong> Machine learning algorithms and real-world AI domains</a>
           <a class="mini-link" href="https://github.com/jhoode/ai-ml-algorithm-landscape" target="_blank" rel="noreferrer"><strong>Repository:</strong> Open on GitHub</a>
         </div>
       </div>
@@ -424,168 +392,124 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>About</h2>
-            <p>This site is designed as a compact professional portfolio that blends technical artifacts, learning growth, and project storytelling.</p>
+            <h2>About This Portfolio</h2>
+            <p>This first draft keeps the site intentionally focused on one polished project so the presentation stays clean, professional, and easy to navigate.</p>
           </div>
         </div>
-        <div class="grid-3">
-          <article class="section-card">
-            <h3>Who I Am</h3>
-            <p>Deployment engineer with formal training in electrical and electronics engineering, cybersecurity, and artificial intelligence.</p>
-          </article>
-          <article class="section-card">
-            <h3>What I Care About</h3>
-            <p>Building AI systems that are understandable, operationally realistic, and aligned with real business or human needs.</p>
-          </article>
-          <article class="section-card">
-            <h3>What This Portfolio Shows</h3>
-            <p>A practical view of how I connect concepts, architecture, model selection, and communication into useful technical work.</p>
-          </article>
-        </div>
+        <article class="section-card">
+          <p>
+            I’m Jude Omo-Ojugo, a deployment engineer with a background in cybersecurity and graduate study in artificial intelligence. This portfolio artifact reflects my interest in machine learning, model selection, AI system design, and clear technical communication.
+          </p>
+        </article>
       </div>
     </section>
 
-    <section id="projects">
+    <section id="project">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Featured Projects</h2>
-            <p>Use this section to showcase both finished work and near-term build targets. The first card is already wired to your current project.</p>
+            <h2>Featured Project Overview</h2>
+            <p>A focused portfolio artifact designed to explain where different machine learning approaches fit across modern AI use cases.</p>
           </div>
         </div>
-
-        <div class="projects">
-          <article class="project-card featured">
-            <div>
-              <div class="project-meta">
-                <span class="chip">Machine Learning</span>
-                <span class="chip">Generative AI</span>
-                <span class="chip">Portfolio Artifact</span>
-              </div>
-              <h3 style="margin-top:12px; font-size:1.7rem;">AI &amp; Machine Learning Algorithm Landscape</h3>
-              <p>
-                A visual framework mapping machine learning algorithm categories to major application domains such as tabular data, computer vision, NLP, and generative AI.
-              </p>
-              <p>
-                This project demonstrates clear technical communication, model-selection awareness, and portfolio-ready presentation of AI concepts.
-              </p>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="https://github.com/jhoode/ai-ml-algorithm-landscape" target="_blank" rel="noreferrer">Open Repository</a>
-                <a class="btn btn-secondary" href="#reflection">Why it matters</a>
-              </div>
-            </div>
-            <div class="project-shot">
-              <img src="ai_algorithm_landscape.png" alt="Project preview for AI algorithm landscape" />
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta">
-              <span class="chip">Architecture</span>
-              <span class="chip">Event-Driven Systems</span>
-            </div>
-            <h3>Incident Triage AI System</h3>
-            <p>Conceptual portfolio project focused on event-driven incident routing, triage intelligence, and scalable system design for engineering operations.</p>
-            <p class="muted">Suggested next add: architecture diagram, design goals, workflow, and deployment stack.</p>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta">
-              <span class="chip">Serverless</span>
-              <span class="chip">AWS</span>
-            </div>
-            <h3>Serverless Reporting Platform</h3>
-            <p>Internal reporting and planning platform concept using cloud-native services to collect team inputs, maintain history, and generate summaries.</p>
-            <p class="muted">Suggested next add: executive summary, AWS architecture, implementation checklist, and screenshots.</p>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta">
-              <span class="chip">NLP</span>
-              <span class="chip">Python</span>
-            </div>
-            <h3>Scripture Text Analysis</h3>
-            <p>NLP-based exploration of biblical text to identify recurring patterns, themes, and interpretive insights through computational analysis.</p>
-            <p class="muted">Suggested next add: notebook screenshots, methods used, findings, and ethical reflection.</p>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta">
-              <span class="chip">Frontend</span>
-              <span class="chip">Maps</span>
-            </div>
-            <h3>Location-Based Group Assignment Tool</h3>
-            <p>Geo-enabled web workflow for assigning participants to local groups using address logic, spreadsheet integration, and visual interaction.</p>
-            <p class="muted">Suggested next add: live demo link, UI screenshots, problem statement, and technical stack.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Skills & Focus Areas</h2>
-            <p>Frame your strengths around the kind of roles you want: AI deployment, ML systems, solution architecture, and practical engineering delivery.</p>
-          </div>
-        </div>
-        <div class="section-card">
+        <article class="section-card">
+          <h3 style="font-size:1.55rem; margin-bottom:14px;">AI &amp; Machine Learning Algorithm Landscape</h3>
+          <p>
+            This project presents a visual framework of major machine learning algorithm categories and their primary application domains. The goal is to demonstrate how different machine learning models align with specific types of data and real-world AI problems.
+          </p>
+          <p>
+            Understanding the relationship between algorithms and problem domains is essential when designing AI systems.
+          </p>
           <div class="skills">
-            <span class="chip">Machine Learning Fundamentals</span>
-            <span class="chip">Deep Learning Concepts</span>
+            <span class="chip">Machine Learning</span>
+            <span class="chip">Deep Learning</span>
             <span class="chip">Generative AI</span>
             <span class="chip">NLP</span>
-            <span class="chip">Computer Vision Concepts</span>
-            <span class="chip">Systems Architecture</span>
-            <span class="chip">Cloud & AWS</span>
-            <span class="chip">AI Deployment Thinking</span>
-            <span class="chip">Cybersecurity Awareness</span>
-            <span class="chip">Technical Communication</span>
-            <span class="chip">Project Documentation</span>
-            <span class="chip">Portfolio Storytelling</span>
+            <span class="chip">Computer Vision</span>
+            <span class="chip">AI Systems Thinking</span>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section id="journey">
+    <section id="categories">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Learning Journey</h2>
-            <p>This section helps recruiters see progression, not just static deliverables.</p>
+            <h2>Algorithm Categories</h2>
+            <p>Each category below explains the algorithm type, example models, and common use cases.</p>
           </div>
         </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="date">Foundation</div>
-            <div>
-              <h3>Engineering and cybersecurity background</h3>
-              <p>Built a base in technical problem-solving, systems thinking, and secure-by-design awareness.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="date">Expansion</div>
-            <div>
-              <h3>Graduate study in artificial intelligence</h3>
-              <p>Strengthening practical understanding of machine learning, AI applications, and the reasoning behind model selection.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="date">Application</div>
-            <div>
-              <h3>Building portfolio-ready AI artifacts</h3>
-              <p>Converting coursework and project ideas into professional, public-facing portfolio assets that show initiative and execution.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="date">Direction</div>
-            <div>
-              <h3>Targeting AI deployment and ML systems roles</h3>
-              <p>Focusing on work that sits between architecture, delivery, operations, and applied AI.</p>
-            </div>
-          </div>
+
+        <div class="content-grid">
+          <article class="subcard">
+            <h3>Supervised Learning</h3>
+            <p>Supervised learning algorithms learn patterns from labeled data.</p>
+            <h4>Examples</h4>
+            <ul>
+              <li>Decision Trees</li>
+              <li>Random Forest</li>
+              <li>Support Vector Machines</li>
+              <li>Linear Regression</li>
+            </ul>
+            <h4>Common Use Cases</h4>
+            <ul>
+              <li>Fraud detection</li>
+              <li>Credit risk prediction</li>
+              <li>Sales forecasting</li>
+            </ul>
+          </article>
+
+          <article class="subcard">
+            <h3>Unsupervised Learning</h3>
+            <p>Unsupervised algorithms identify patterns in unlabeled data.</p>
+            <h4>Examples</h4>
+            <ul>
+              <li>K-Means Clustering</li>
+              <li>Principal Component Analysis (PCA)</li>
+              <li>Hierarchical Clustering</li>
+            </ul>
+            <h4>Use Cases</h4>
+            <ul>
+              <li>Customer segmentation</li>
+              <li>Anomaly detection</li>
+              <li>Data exploration</li>
+            </ul>
+          </article>
+
+          <article class="subcard">
+            <h3>Deep Learning</h3>
+            <p>Deep learning models use neural networks to process complex data such as images, audio, and text.</p>
+            <h4>Examples</h4>
+            <ul>
+              <li>Convolutional Neural Networks (CNN)</li>
+              <li>Recurrent Neural Networks (RNN)</li>
+              <li>Transformers</li>
+            </ul>
+            <h4>Use Cases</h4>
+            <ul>
+              <li>Computer vision</li>
+              <li>Speech recognition</li>
+              <li>Language translation</li>
+            </ul>
+          </article>
+
+          <article class="subcard">
+            <h3>Generative AI</h3>
+            <p>Generative AI models create new content such as text, images, or audio.</p>
+            <h4>Examples</h4>
+            <ul>
+              <li>Generative Adversarial Networks (GANs)</li>
+              <li>Diffusion Models</li>
+              <li>GPT models</li>
+            </ul>
+            <h4>Use Cases</h4>
+            <ul>
+              <li>Image generation</li>
+              <li>Text generation</li>
+              <li>Creative content production</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -595,28 +519,20 @@
         <div class="section-head">
           <div>
             <h2>Reflection</h2>
-            <p>A good portfolio does more than display work. It also shows how you think.</p>
+            <p>This section explains why the project matters beyond the visual itself.</p>
           </div>
         </div>
-        <div class="reflection">
-          <article class="section-card">
-            <div class="quote">
-              “Creating this portfolio artifact helped me move beyond memorizing algorithm names and toward understanding how model choice connects to data structure, problem framing, and real-world AI system design.”
-            </div>
-            <p style="margin-top:14px; color:var(--muted);">
-              The algorithm landscape project sharpened my ability to explain technical material clearly and visually. It also reinforced an important lesson: effective AI work is not only about knowing models, but about knowing when and why to use them.
-            </p>
-          </article>
-          <article class="section-card">
-            <h3>Why this matters professionally</h3>
-            <p>
-              Employers often want evidence that a candidate can connect theory to application. This portfolio is built to show that I can study concepts, structure them clearly, and present them in a way that supports practical implementation.
-            </p>
-            <p>
-              That mix of communication, engineering context, and AI reasoning is central to the kind of roles I’m pursuing.
-            </p>
-          </article>
-        </div>
+        <article class="section-card">
+          <div class="quote">
+            “Creating this artifact helped me strengthen my understanding of how machine learning algorithms connect to specific data types, domains, and practical AI applications.”
+          </div>
+          <p style="margin-top:14px;">
+            Rather than viewing algorithms as isolated concepts, this project helped me think more clearly about how they align with real-world problem solving. Tree-based models often fit structured tabular data well, deep learning models are central to vision and language tasks, and generative AI models are increasingly important in modern content creation systems.
+          </p>
+          <p>
+            Building this portfolio artifact also reinforced the value of presenting technical knowledge in a professional and accessible format. That ability is important not only in academics, but also in engineering and AI deployment roles where communication is essential.
+          </p>
+        </article>
       </div>
     </section>
   </main>
@@ -624,12 +540,12 @@
   <footer class="footer">
     <div class="container footer-card">
       <div>
-        <h3>Next best move</h3>
-        <p class="muted">Publish this as GitHub Pages, then add one new project every 1–2 weeks.</p>
+        <h3>Current Portfolio Scope</h3>
+        <p class="muted">This first version intentionally focuses on one strong AI project. Additional projects can be added in future updates.</p>
       </div>
       <div class="hero-actions">
         <a class="btn btn-primary" href="https://github.com/jhoode/ai-ml-algorithm-landscape" target="_blank" rel="noreferrer">Repository</a>
-        <a class="btn btn-secondary" href="#projects">Back to Projects</a>
+        <a class="btn btn-secondary" href="#project">Back to Project</a>
       </div>
     </div>
   </footer>
