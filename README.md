@@ -77,7 +77,7 @@ Use Cases:
 
 ## Visual Framework
 
-![AI Algorithm Landscape](diagram/ai_algorithm_landscape.png)
+![AI Algorithm Landscape](ai_algorithm_landscape.png)
 
 ---
 
