@@ -1,4 +1,3 @@
-# ai-ml-algorithm-landscape
 
 # AI & Machine Learning Algorithm Landscape
 
