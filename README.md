@@ -111,3 +111,9 @@ Use Cases:
 ## Key Insight
 
 Selecting the appropriate algorithm depends heavily on the type of data and the problem being solved. Tree-based models often perform best with structured tabular data, convolutional neural networks dominate computer vision tasks, and transformer architectures have become foundational in modern natural language processing and generative AI systems.
+
+
+## My Reflection
+This artifact presents a visual framework of major machine learning algorithm categories and their primary application domains. Understanding how different algorithms align with specific problem types is critical when designing AI systems. For example, tree-based models often perform well with structured tabular data, while convolutional neural networks dominate computer vision tasks. More recently, transformer architectures have revolutionized natural language processing and generative AI applications.
+
+Creating this framework strengthened my understanding of the relationship between algorithm design and real-world AI applications. As an aspiring AI practitioner, this knowledge enables me to select appropriate models when solving practical problems across domains such as analytics, vision systems, and generative AI platforms.
